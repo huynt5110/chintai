@@ -1,0 +1,9 @@
+@function calc-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+@mixin respond-to($media) {
+  @media only screen and (max-width: $media + 'px') {
+    @content;
+  }
+}

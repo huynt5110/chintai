@@ -1,0 +1,206 @@
+.main {
+  &-inner {
+    @extend %flex;
+    @include respond-to($tabWidth) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+  }
+  &-content {
+    width: calc-percent(730,$innerWidth);
+    max-width: 730px;
+    @include respond-to($tabWidth) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}
+// list item
+.list {
+  &-item {
+    margin: 30px auto;
+    flex-wrap: wrap;
+    @extend %flex;
+    @include respond-to($mediumWidth) {
+      margin: calc-percent(30,$mediumWidth) auto;
+    }
+    @include respond-to($smallWidth) {
+      flex-direction: column;
+    }
+    li {
+      width:calc-percent(350,730) ;
+      margin-right: calc-percent(30,730);
+      border: 2px solid $itemColor;
+      margin-bottom: calc-percent(30,730);
+      &:nth-of-type(2n+2) {
+        margin-right: 0;
+      }
+      @include respond-to($smallWidth) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: calc-percent(30,$smallWidth);
+      }
+      a {
+        display: block;
+        color: $txtColor;
+      }
+    }
+    &-info {
+      padding: 9px 20px 14px;
+      @include respond-to($smallWidth) {
+        padding: calc-percent(9,$smallWidth) calc-percent(20,$smallWidth) calc-percent(14,$smallWidth) ;
+      }
+      .ttl {
+        line-height: (38/24);
+        margin-bottom: 6px;
+        //font-size: 24px;
+        font-weight: 800;
+        @include responsive-font(get-vw(24px), 12px, 24px);
+        @include respond-to($mediumWidth) {
+          @include responsive-font(get-vw-sp(24px), 12px, 24px);
+        }
+      }
+      .info {
+        line-height: (22/16);
+      }
+    }
+  }
+}
+//campaign
+.campaign {
+  &-ttl {
+    padding: 3.5px 10px;
+    background-color: $pinkColor;
+    @extend %flex-center;
+    @extend %flex;
+    @include respond-to($tabWidth) {
+      padding: calc-percent(18.5,$tabWidth);
+    }
+    &-icn {
+      margin-right: 14px;
+    }
+    span {
+      &:last-child {
+        margin-top: 4px;
+      }
+    }
+  }
+  &-info {
+    padding: 17px 30px 27px;
+    background: $itemColor url("../images/icn_plane.png") no-repeat 85% 2px;
+    background-size: 100px auto;
+    @include respond-to($mediumWidth) {
+      padding: calc-percent(17,$mediumWidth) calc-percent(30,$mediumWidth) calc-percent(27,$mediumWidth);
+      //background-size: 27%;
+    }
+    .ttl ,
+    .link a {
+      text-align: center;
+      color: $pinkColor;
+      @include respond-to($smallWidth) {
+        text-align: left;
+      }
+    }
+    .ttl {
+      margin-bottom: 4px;
+      //font-size: 26px;
+      line-height: (31/26);
+      font-weight: 800;
+      @include responsive-font(get-vw(26px), 12px, 26px);
+      @include respond-to($mediumWidth) {
+        @include responsive-font(get-vw-sp(28px), 12px, 28px);
+      }
+    }
+    .link {
+      margin-bottom: 18px;
+      text-align: center;
+      line-height: (20/15);
+      @include responsive-font(get-vw(15px), 12px, 15px);
+      @include respond-to($mediumWidth) {
+        @include responsive-font(get-vw-sp(16px), 12px, 16px);
+      }
+      @include respond-to($smallWidth) {
+        text-align: left;
+      }
+      a {
+        display: inline-block;
+        text-align: center;
+      }
+    }
+  }
+  &-item {
+    @extend %flex;
+    @include respond-to($mediumWidth) {
+      flex-wrap: wrap;
+      flex-direction: column;
+    }
+    li {
+      width: calc-percent(320,670);
+      margin-right: calc-percent(30,670);
+      position: relative;
+      box-sizing: border-box;
+      @include respond-to($mediumWidth) {
+        margin-bottom: calc-percent(20,$mediumWidth);
+        width: 100%;
+        margin-right: 0;
+      }
+      &:first-child {
+        background-color: $whiteColor;
+        border: 1px solid #d7d7d7;
+      }
+      &:last-child {
+        margin-right: 0 ;
+        background-color: #0056a9;
+        border: 1px solid #0056a9;
+      }
+      >div {
+        padding-top: calc-percent(120,320) ;
+        @include respond-to($mediumWidth) {
+          padding-top: calc-percent(140,580);
+        }
+      }
+      img {
+        width: calc-percent(190,320);
+        @include respond-to($mediumWidth) {
+          width: calc-percent(240,$mediumWidth);
+        }
+      }
+      a {
+        position: absolute;
+        top:0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      p {
+        height: 100% ;
+        width: 100%;
+        align-items: center;
+        @extend %flex;
+      }
+    }
+  }
+}
+.recoment {
+  &-ttl {
+    //font-size: 20px;
+    text-align: center;
+    color: #999;
+    font-weight: 600;
+    @include responsive-font(get-vw(20px), 12px, 20px);
+    @include respond-to($mediumWidth) {
+      @include responsive-font(get-vw-sp(20px), 12px, 20px);
+    }
+    span {
+      display: block;
+      margin-bottom: 8px ;
+      //font-size: 26px;
+      color: #424242;
+      font-weight: 800;
+      @include responsive-font(get-vw(26px), 12px, 26px);
+      @include respond-to($mediumWidth) {
+        @include responsive-font(get-vw-sp(26px), 12px, 26px);
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.news{
+  .title{
+    padding: 17px 15px;
+  }
+  .table td, .table th{
+    padding: 1.4rem;
+  }
+  .table tr td:first-child{
+    width: 20%;
+    text-align: center;
+    min-width: 135px;
+  }
+}

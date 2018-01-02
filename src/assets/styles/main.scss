@@ -1,0 +1,35 @@
+/*------------Do not edit other people's css.--------------*/
+
+@import "fonts/font-awesome";
+
+@import "global";
+
+@import "mixin";
+
+
+/*-------variable from bootstrap------*/
+@import "bootstrap/functions";
+@import "bootstrap/variables";
+/*-------variable from bootstrap------*/
+
+/*-------components------*/
+
+@import "components/header";
+
+@import "components/footer";
+
+@import "components/nav";
+
+@import "components/side-menu";
+
+@import "components/recommend";
+
+@import "components/news";
+
+@import "components/company-info";
+
+/*-------end components------*/
+
+@import "common";
+
+

@@ -1,0 +1,9 @@
+.company-info{
+  &__image{
+    width: calc-percent(480, 1260);
+    margin-right: calc-percent(40, 1260);
+  }
+  &__content{
+    width: calc-percent(1260 - 520, 1260);
+  }
+}
